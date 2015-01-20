@@ -1,27 +1,18 @@
+#include "Person.h"
 #include <string>
 using namespace std;
 
-class Patient
+class Patient: public Person
 {
-private:
-	int	_id,
-		_age;
-	string _firstName,
-		_lastName;
+	private:
+		int _id;
+		bool _isDeceased;
 
-public:
-	Patient(int id, int age, string firstName, string lastName);
-	~Patient();
+	public:
+		Patient(int id, int age, string firstName, string lastName, bool isDeceased);
+		~Patient();
 
-	int getId();
-
-	int getAge();
-	void setAge(int value);
-
-	string getFirstName();
-	void setFirstName(string value);
-
-	string getLastName();
-	void setLastName(string value);
-
+		int GetId();
+		bool GetIsDeceased();
+		void SetIsDeceased(bool value);
 };

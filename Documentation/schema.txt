@@ -1,24 +1,24 @@
-Pacient:
-	Id
-	Nume
-	Prenume
-	Varsta
+Department
+	id
+	name
 	
-Fisa:
-	Id
-	Pacient_Id
-	Doctor_Id
-	Data
-	Diagnostic
+Person
+	age
+	firstName
+	lastName
 	
-Doctor:
-	Id
-	Nume
-	Prenume
-	Specializare_Id
-	Grade
-	Varsta
+Patient: Person
+	id
+	isDeceased
 	
-Specializare:
-	Id
-	Nume
+Doctor: Person
+	id
+	departmentId
+	grade
+
+MedicalFile
+	id
+	patientId
+	doctorId
+	date
+	diagnostic

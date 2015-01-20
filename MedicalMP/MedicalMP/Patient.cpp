@@ -1,48 +1,27 @@
 #include "Patient.h"
 
-Patient::Patient(int id, int age, string firstName, string lastName)
+Patient::Patient(int id, int age, string firstName, string lastName, bool isDeceased)
+	:Person(age, firstName, lastName)
 {
 	_id = id;
-	_age = age;
-	_firstName = firstName;
-	_lastName = lastName;
+	_isDeceased = isDeceased;
 }
 
 Patient::~Patient()
 {
 }
 
-int Patient::getId()
+int Patient::GetId()
 {
-	return this->_id;
+	return _id;
 }
 
-int Patient::getAge()
+bool Patient::GetIsDeceased()
 {
-	return this->_age;
+	return _isDeceased;
 }
 
-void Patient::setAge(int value)
+void Patient::SetIsDeceased(bool value)
 {
-	this->_age = value;
-}
-
-string Patient::getFirstName()
-{
-	return this->_firstName;
-}
-
-void Patient::setFirstName(string value)
-{
-	this->_firstName = value;
-}
-
-string Patient::getLastName()
-{
-	return this->_lastName;
-}
-
-void Patient::setLastName(string value)
-{
-	this->_lastName = value;
+	_isDeceased = value;
 }
