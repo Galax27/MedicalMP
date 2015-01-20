@@ -1,0 +1,24 @@
+Pacient:
+	Id
+	Nume
+	Prenume
+	Varsta
+	
+Fisa:
+	Id
+	Pacient_Id
+	Doctor_Id
+	Data
+	Diagnostic
+	
+Doctor:
+	Id
+	Nume
+	Prenume
+	Specializare_Id
+	Grade
+	Varsta
+	
+Specializare:
+	Id
+	Nume
