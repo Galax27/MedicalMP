@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Context.cpp" />
     <ClCompile Include="Department.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="main.cpp" />
@@ -86,6 +87,7 @@
     <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Context.h" />
     <ClInclude Include="Department.h" />
     <ClInclude Include="Disease.h" />
     <ClInclude Include="Doctor.h" />
