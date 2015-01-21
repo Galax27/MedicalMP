@@ -85,6 +85,7 @@
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="PatientRepository.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Seed.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Context.h" />
@@ -95,6 +96,7 @@
     <ClInclude Include="MedicalFile.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Seed.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

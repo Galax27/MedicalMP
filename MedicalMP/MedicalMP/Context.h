@@ -11,10 +11,10 @@ class Context
 {
 	public:
 		
-		vector<Patient> Patients;
-		vector<Doctor> Doctors;
-		vector<MedicalFile> MedicalFiles;
-		vector<Department> Departments;
+		vector<Patient*> Patients;
+		vector<Doctor*> Doctors;
+		vector<MedicalFile*> MedicalFiles;
+		vector<Department*> Departments;
 };
 
 #endif
