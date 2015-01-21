@@ -1,7 +1,10 @@
-#ifndef SEED_H    // To make sure you don't declare the function more than once by including the header multiple times.
+#ifndef SEED_H  
 #define SEED_H
 #include "Context.h"
 
 void Seed(Context* context);
-
+void SeedDepartments(Context* context);
+void SeedDoctors(Context* context);
+void SeedPatients(Context* context);
+void SeedMedicalFiles(Context* context);
 #endif

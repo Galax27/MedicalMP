@@ -39,9 +39,6 @@
     <ClCompile Include="Person.cpp">
       <Filter>Source Files\Model</Filter>
     </ClCompile>
-    <ClCompile Include="PatientRepository.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Seed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
