@@ -24,6 +24,14 @@ void Seed(Context* context)
 	context->Patients.push_back(new Patient(109, 47, "Darius", "Adelei", false));
 	context->Patients.push_back(new Patient(110, 33, "Erica", "Nicola", false));
 	
+	//Doctors
+	context->Doctors.push_back(new Doctor(100, 3, 47, Middle, "Augustin", "Cimbru"));
+	context->Doctors.push_back(new Doctor(101, 5, 39, Middle, "Remus", "Petala"));
+	context->Doctors.push_back(new Doctor(102, 1, 50, Middle, "Stefan", "Petrescu"));
+	context->Doctors.push_back(new Doctor(103, 2, 60, Senior, "Marcela", "Horia"));
+	context->Doctors.push_back(new Doctor(104, 6, 32, Junior, "Anton", "Balauta"));
+	context->Doctors.push_back(new Doctor(105, 4, 55, Senior, "Neli", "Spataru"));
+	
 	//MeidcalFiles
 	tm time; time.tm_year = 2003; time.tm_mon = 10; time.tm_mday = 25;
 	context->MedicalFiles.push_back(new MedicalFile(100, 100, 1, time, Cholesterol));
@@ -48,5 +56,11 @@ void Seed(Context* context)
 	tm time; time.tm_year = 2008; time.tm_mon = 5; time.tm_mday = 12;
 	context->MedicalFiles.push_back(new MedicalFile(101, 101, 1, time, EarProblems));
 	
+	//Departments
 	context->Departments.push_back(new Department(1, "Chirurgie"));
+	context->Departments.push_back(new Department(2, "Cardiologie"));
+	context->Departments.push_back(new Department(3, "Hematologie"));
+	context->Departments.push_back(new Department(4, "Neurologie"));
+	context->Departments.push_back(new Department(5, "Ortopedie"));
+	context->Departments.push_back(new Department(6, "Oftalmologie"));
 }
