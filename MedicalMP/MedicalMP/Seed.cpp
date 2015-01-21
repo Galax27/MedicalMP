@@ -35,25 +35,25 @@ void Seed(Context* context)
 	//MeidcalFiles
 	tm time; time.tm_year = 2003; time.tm_mon = 10; time.tm_mday = 25;
 	context->MedicalFiles.push_back(new MedicalFile(100, 100, 1, time, Cholesterol));
-	tm time; time.tm_year = 2007; time.tm_mon = 11; time.tm_mday = 12;
+	time.tm_year = 2007; time.tm_mon = 11; time.tm_mday = 12;
 	context->MedicalFiles.push_back(new MedicalFile(101, 101, 1, time, EatingDisorder));
-	tm time; time.tm_year = 2004; time.tm_mon = 5; time.tm_mday = 16;
+	time.tm_year = 2004; time.tm_mon = 5; time.tm_mday = 16;
 	context->MedicalFiles.push_back(new MedicalFile(102, 102, 1, time, Headache));
-	tm time; time.tm_year = 2000; time.tm_mon = 8; time.tm_mday = 21;
+	time.tm_year = 2000; time.tm_mon = 8; time.tm_mday = 21;
 	context->MedicalFiles.push_back(new MedicalFile(103, 103, 1, time, Tuberculosis));
-	tm time; time.tm_year = 2008; time.tm_mon = 3; time.tm_mday = 15;
+	time.tm_year = 2008; time.tm_mon = 3; time.tm_mday = 15;
 	context->MedicalFiles.push_back(new MedicalFile(104, 104, 1, time, Infertility));
-	tm time; time.tm_year = 2011; time.tm_mon = 11; time.tm_mday = 12;
+	time.tm_year = 2011; time.tm_mon = 11; time.tm_mday = 12;
 	context->MedicalFiles.push_back(new MedicalFile(105, 105, 1, time, Allergy));
-	tm time; time.tm_year = 2012; time.tm_mon = 4; time.tm_mday = 7;
+	time.tm_year = 2012; time.tm_mon = 4; time.tm_mday = 7;
 	context->MedicalFiles.push_back(new MedicalFile(106, 106, 1, time, Pneumonia));
-	tm time; time.tm_year = 2004; time.tm_mon = 6; time.tm_mday = 8;
+	time.tm_year = 2004; time.tm_mon = 6; time.tm_mday = 8;
 	context->MedicalFiles.push_back(new MedicalFile(107, 107, 1, time, Obesity));
-	tm time; time.tm_year = 2006; time.tm_mon = 3; time.tm_mday = 27;
+	time.tm_year = 2006; time.tm_mon = 3; time.tm_mday = 27;
 	context->MedicalFiles.push_back(new MedicalFile(108, 108, 1, time, LungCancer));
-	tm time; time.tm_year = 2003; time.tm_mon = 10; time.tm_mday = 19;
+	time.tm_year = 2003; time.tm_mon = 10; time.tm_mday = 19;
 	context->MedicalFiles.push_back(new MedicalFile(109, 109, 1, time, Migraine));
-	tm time; time.tm_year = 2008; time.tm_mon = 5; time.tm_mday = 12;
+	time.tm_year = 2008; time.tm_mon = 5; time.tm_mday = 12;
 	context->MedicalFiles.push_back(new MedicalFile(101, 101, 1, time, EarProblems));
 	
 	//Departments
