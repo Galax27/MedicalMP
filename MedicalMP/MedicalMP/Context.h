@@ -9,8 +9,6 @@
 using namespace std;
 class Context
 {
-	private:
-		bool patientValidation(Patient p);
 	public:
 		
 		vector<Patient> Patients;
