@@ -1,3 +1,5 @@
+#ifndef MEDICAL_FILE_H
+#define MEDICAL_FILE_H
 #include <ctime>
 #include "Disease.h"
 class MedicalFile
@@ -21,3 +23,5 @@ class MedicalFile
 		Disease getDiagnostic();
 		void setDiagnostic(Disease diagnostic, int doctorId);
 };
+
+#endif

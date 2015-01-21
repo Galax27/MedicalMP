@@ -1,3 +1,5 @@
+#ifndef PATIENT_H
+#define PATIENT_H
 #include "Person.h"
 #include <string>
 using namespace std;
@@ -16,3 +18,5 @@ class Patient: public Person
 		bool GetIsDeceased();
 		void SetIsDeceased(bool value);
 };
+
+#endif

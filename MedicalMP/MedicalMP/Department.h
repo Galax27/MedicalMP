@@ -1,3 +1,5 @@
+#ifndef DEPARTAMENT_H
+#define DEPARTAMENT_H
 #include <string>
 using namespace std;
 class Department
@@ -14,3 +16,5 @@ public:
 	string GetName();
 	void SetName(string value);
 };
+
+#endif

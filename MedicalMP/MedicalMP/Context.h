@@ -1,3 +1,5 @@
+#ifndef CONTEXT_H
+#define CONTEXT_H
 #include<stdio.h>
 #include<vector>
 #include"Patient.h"
@@ -8,13 +10,13 @@ using namespace std;
 class Context
 {
 	private:
-
+		bool patientValidation(Patient p);
 	public:
-		Context();
-		~Context();
 		
 		vector<Patient> Patients;
 		vector<Doctor> Doctors;
 		vector<MedicalFile> MedicalFiles;
 		vector<Department> Departments;
 };
+
+#endif

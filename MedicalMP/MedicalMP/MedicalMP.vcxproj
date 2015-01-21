@@ -84,6 +84,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MedicalFile.cpp" />
     <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="PatientRepository.cpp" />
     <ClCompile Include="Person.cpp" />
   </ItemGroup>
   <ItemGroup>

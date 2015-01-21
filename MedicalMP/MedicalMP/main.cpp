@@ -29,5 +29,6 @@ int main() {
 	printf("Doctor first name: %s\n", doc->GetFirstName().c_str());
 	printf("Department name: %s\n", dep->GetName().c_str());
 	printf("Medical file diagnostic: %d; Day:%d\n", mf->getDiagnostic(), mf->getDate().tm_mday);
+
 	getchar();
 }

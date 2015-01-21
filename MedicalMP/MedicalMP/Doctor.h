@@ -1,3 +1,5 @@
+#ifndef DOCTOR_H
+#define DOCTOR_H
 #include <string>
 #include "Person.h"
 #include "Grade.h"
@@ -21,3 +23,5 @@ class Doctor: public Person
 		Grade GetGrade();
 		void SetGrade(Grade value);
 };
+
+#endif
