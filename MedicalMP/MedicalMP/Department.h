@@ -1,20 +1,22 @@
-#ifndef DEPARTAMENT_H
-#define DEPARTAMENT_H
-#include <string>
-using namespace std;
-class Department
+#pragma once
+
+#include "stdafx.h"
+
+namespace MedicalMP
 {
-private:
-	int _id;
-	string _name;
-public:
-	Department(int id, string name);
-	~Department();
+    class Department
+    {
+    private:
+        int _id;
+        std::string _name;
 
-	int GetId();
+    public:
+        Department(int id, std::string name);
+        ~Department();
 
-	string GetName();
-	void SetName(string value);
-};
+        int GetId();
 
-#endif
+        std::string GetName();
+        void SetName(std::string value);
+    };
+}

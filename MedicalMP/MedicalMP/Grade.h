@@ -1,7 +1,12 @@
-enum Grade
+#pragma once
+
+namespace MedicalMP
 {
-	Entry,
-	Junior,
-	Middle,
-	Senior,
-};
+    enum Grade
+    {
+        Entry,
+        Junior,
+        Middle,
+        Senior,
+    };
+}

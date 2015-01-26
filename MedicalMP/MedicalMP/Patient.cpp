@@ -1,27 +1,30 @@
-#include "Patient.h"
+#include "stdafx.h"
 
-Patient::Patient(int id, int age, string firstName, string lastName, bool isDeceased)
-	:Person(age, firstName, lastName)
+namespace MedicalMP
 {
-	_id = id;
-	_isDeceased = isDeceased;
-}
+    Patient::Patient(int id, int age, std::string firstName, std::string lastName, bool isDeceased)
+        :Person(age, firstName, lastName)
+    {
+        _id = id;
+        _isDeceased = isDeceased;
+    }
 
-Patient::~Patient()
-{
-}
+    Patient::~Patient()
+    {
+    }
 
-int Patient::GetId()
-{
-	return _id;
-}
+    int Patient::GetId()
+    {
+        return _id;
+    }
 
-bool Patient::GetIsDeceased()
-{
-	return _isDeceased;
-}
+    bool Patient::GetIsDeceased()
+    {
+        return _isDeceased;
+    }
 
-void Patient::SetIsDeceased(bool value)
-{
-	_isDeceased = value;
+    void Patient::SetIsDeceased(bool value)
+    {
+        _isDeceased = value;
+    }
 }

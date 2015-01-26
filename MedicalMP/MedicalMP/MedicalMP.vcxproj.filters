@@ -13,63 +13,111 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Model">
+    <Filter Include="Header Files\Database">
+      <UniqueIdentifier>{9012c157-3e4b-4c99-8f03-cb392011a5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Database\Model">
       <UniqueIdentifier>{4e17ea2f-90fa-490c-97f4-b5e3a6b3cccf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Model">
+    <Filter Include="Source Files\Database">
+      <UniqueIdentifier>{eeec6d82-3c60-46a7-8c48-0554944187cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Database\Model">
       <UniqueIdentifier>{97d148ca-6be9-4267-a771-5f1f38b09120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{31d676c8-a95f-472d-8373-a5727cb3f47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{1cd81036-6583-4021-afe4-9b1ced612560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UnitTests">
+      <UniqueIdentifier>{ac57f7b7-1dee-46ef-9c60-646b341b7cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UnitTests">
+      <UniqueIdentifier>{708a2f55-d4c5-4125-b3c5-2967ee55b5c3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Department.cpp">
-      <Filter>Source Files\Model</Filter>
+      <Filter>Source Files\Database\Model</Filter>
     </ClCompile>
     <ClCompile Include="Doctor.cpp">
-      <Filter>Source Files\Model</Filter>
+      <Filter>Source Files\Database\Model</Filter>
     </ClCompile>
     <ClCompile Include="MedicalFile.cpp">
-      <Filter>Source Files\Model</Filter>
+      <Filter>Source Files\Database\Model</Filter>
     </ClCompile>
     <ClCompile Include="Patient.cpp">
-      <Filter>Source Files\Model</Filter>
+      <Filter>Source Files\Database\Model</Filter>
     </ClCompile>
     <ClCompile Include="Person.cpp">
-      <Filter>Source Files\Model</Filter>
+      <Filter>Source Files\Database\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Seed.cpp">
+      <Filter>Source Files\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="Entrypoint.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="TestsDB.cpp">
+      <Filter>Source Files\UnitTests</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files\Misc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Disease.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Grade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Department.h">
-      <Filter>Header Files\Model</Filter>
+      <Filter>Header Files\Database\Model</Filter>
     </ClInclude>
     <ClInclude Include="Doctor.h">
-      <Filter>Header Files\Model</Filter>
+      <Filter>Header Files\Database\Model</Filter>
     </ClInclude>
     <ClInclude Include="MedicalFile.h">
-      <Filter>Header Files\Model</Filter>
+      <Filter>Header Files\Database\Model</Filter>
     </ClInclude>
     <ClInclude Include="Patient.h">
-      <Filter>Header Files\Model</Filter>
+      <Filter>Header Files\Database\Model</Filter>
     </ClInclude>
     <ClInclude Include="Person.h">
-      <Filter>Header Files\Model</Filter>
+      <Filter>Header Files\Database\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Context.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Disease.h">
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Grade.h">
+      <Filter>Header Files\Database</Filter>
     </ClInclude>
     <ClInclude Include="Seed.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="TestsDB.h">
+      <Filter>Header Files\UnitTests</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files\Misc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

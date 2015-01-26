@@ -1,27 +1,25 @@
-#ifndef DOCTOR_H
-#define DOCTOR_H
-#include <string>
-#include "Person.h"
-#include "Grade.h"
-using namespace std;
+#pragma once
 
-class Doctor: public Person
+#include "stdafx.h"
+
+namespace MedicalMP
 {
-	private:
-		int _id,
-			_departmentId;
-		Grade _grade;
-	public:
-		Doctor(int id, int departmentId, int age, Grade grade, string firstName, string lastName);
-		~Doctor();
+    class Doctor : public Person
+    {
+    private:
+        int _id,
+            _departmentId;
+        Grade _grade;
+    public:
+        Doctor(int id, int departmentId, int age, Grade grade, std::string firstName, std::string lastName);
+        ~Doctor();
 
-		int GetId();
-		
-		int GetDepartmentId();
-		void SetDepartmentId(int value);
+        int GetId();
 
-		Grade GetGrade();
-		void SetGrade(Grade value);
-};
+        int GetDepartmentId();
+        void SetDepartmentId(int value);
 
-#endif
+        Grade GetGrade();
+        void SetGrade(Grade value);
+    };
+}
