@@ -15,7 +15,7 @@ namespace MedicalMP
 
             entry()
             {
-                m_ID = Utils::GetRandomUnsigned(10000);
+                m_ID = Utils::GetRandomUnsigned(1000000);
                 
                 m_Name = Utils::GetRandomString(100);
 
@@ -41,12 +41,12 @@ namespace MedicalMP
         static std::unordered_set<unsigned int> UniqueIDs;
 
         static void Seed(unsigned int limit);
-        static bool CreateNewEntry(unsigned int threadID = k_MasterThread);
+        static bool CreateNewEntry(unsigned int threadID, double& timeElapsed);
         
         static int SearchEntry(unsigned int entryID);
         
-        static bool UpdateEntry(unsigned int entryID, unsigned int threadID);
-        static bool DeleteEntry(unsigned int entryID, unsigned int threadID);
+        static bool UpdateEntry(unsigned int entryID, unsigned int threadID, double& timeElapsed);
+        static bool DeleteEntry(unsigned int entryID, unsigned int threadID, double& timeElapsed);
         
         static void ParalelizeRequests();
 

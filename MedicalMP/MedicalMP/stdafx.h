@@ -2,7 +2,7 @@
 
 // Constants
 static unsigned int k_NumThreads(10);
-static unsigned int k_MasterThread(1001);
+static unsigned int k_MasterThread(0);
 
 // OpenMP
 #include <omp.h>
@@ -20,6 +20,7 @@ static unsigned int k_MasterThread(1001);
 #include <set>
 #include <iterator>
 #include <unordered_set>
+#include <chrono>
 
 // Enums
 #include "Disease.h"
