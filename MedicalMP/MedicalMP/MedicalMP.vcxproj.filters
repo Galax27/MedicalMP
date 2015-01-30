@@ -37,6 +37,15 @@
     <Filter Include="Source Files\UnitTests">
       <UniqueIdentifier>{708a2f55-d4c5-4125-b3c5-2967ee55b5c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Requests">
+      <UniqueIdentifier>{23afeafa-2be4-4839-9939-f4bf2acebb41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Samples">
+      <UniqueIdentifier>{94cb1b19-7bb2-4000-80e9-e4136860d746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Samples">
+      <UniqueIdentifier>{c094c25b-1d96-44ce-a48c-ebad5f1b55c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Department.cpp">
@@ -57,9 +66,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Seed.cpp">
-      <Filter>Source Files\Database</Filter>
-    </ClCompile>
     <ClCompile Include="Entrypoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -74,6 +80,15 @@
     </ClCompile>
     <ClCompile Include="System.cpp">
       <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseEntity.cpp">
+      <Filter>Source Files\Database\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleData.cpp">
+      <Filter>Source Files\Samples</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleRequests.cpp">
+      <Filter>Source Files\Samples</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,15 +113,6 @@
     <ClInclude Include="Context.h">
       <Filter>Header Files\Database</Filter>
     </ClInclude>
-    <ClInclude Include="Disease.h">
-      <Filter>Header Files\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Grade.h">
-      <Filter>Header Files\Database</Filter>
-    </ClInclude>
-    <ClInclude Include="Seed.h">
-      <Filter>Header Files\Database</Filter>
-    </ClInclude>
     <ClInclude Include="Logger.h">
       <Filter>Header Files\Misc</Filter>
     </ClInclude>
@@ -118,6 +124,36 @@
     </ClInclude>
     <ClInclude Include="System.h">
       <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestsContainer.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseEntity.h">
+      <Filter>Header Files\Database\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Disease.h">
+      <Filter>Header Files\Database\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Grade.h">
+      <Filter>Header Files\Database\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleData.h">
+      <Filter>Header Files\Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleRequests.h">
+      <Filter>Header Files\Samples</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

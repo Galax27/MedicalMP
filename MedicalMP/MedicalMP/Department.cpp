@@ -2,21 +2,15 @@
 
 namespace MedicalMP
 {
-    Department::Department(int id, std::string name)
+	Department::Department(int id, std::string name) : BaseEntity(id)
     {
-        _id = id;
         _name = name;
     }
+	
+	Department::~Department()
+	{
 
-    Department::~Department()
-    {
-
-    }
-
-    int Department::GetId()
-    {
-        return _id;
-    }
+	}
 
     std::string Department::GetName()
     {

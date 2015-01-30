@@ -9,11 +9,6 @@ namespace MedicalMP
         _lastName = lastName;
     }
 
-    Person::~Person()
-    {
-
-    }
-
     int Person::GetAge()
     {
         return _age;

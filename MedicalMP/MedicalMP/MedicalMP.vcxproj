@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseEntity.cpp" />
     <ClCompile Include="Department.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="Entrypoint.cpp" />
@@ -85,7 +86,8 @@
     <ClCompile Include="MedicalFile.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Seed.cpp" />
+    <ClCompile Include="SampleData.cpp" />
+    <ClCompile Include="SampleRequests.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -95,18 +97,25 @@
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseEntity.h" />
+    <ClInclude Include="BaseRequest.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="DeleteRequest.h" />
     <ClInclude Include="Department.h" />
     <ClInclude Include="Disease.h" />
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="Grade.h" />
+    <ClInclude Include="InsertRequest.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="RequestsContainer.h" />
+    <ClInclude Include="SampleData.h" />
+    <ClInclude Include="SampleRequests.h" />
+    <ClInclude Include="SelectRequest.h" />
     <ClInclude Include="System.h" />
     <ClInclude Include="TestsDB.h" />
     <ClInclude Include="MedicalFile.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="Person.h" />
-    <ClInclude Include="Seed.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

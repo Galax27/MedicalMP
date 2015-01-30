@@ -4,11 +4,10 @@
 
 namespace MedicalMP
 {
-    class MedicalFile
+    class MedicalFile: public BaseEntity
     {
     private:
-        int _id,
-            _patientId,
+        int _patientId,
             _doctorId;
         tm _date;
         Disease _diagnostic;
@@ -16,8 +15,7 @@ namespace MedicalMP
     public:
         MedicalFile(int id, int patientId, int doctorId, tm date, Disease diagnostic);
         ~MedicalFile();
-
-        int getId();
+		
         int getPatientId();
         int getDoctorId();
         tm getDate();

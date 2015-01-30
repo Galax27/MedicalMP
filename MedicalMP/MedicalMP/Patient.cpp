@@ -13,6 +13,10 @@ namespace MedicalMP
     {
     }
 
+	bool Patient::operator==(const Patient& other) {
+		return this->_id == other._id;
+	}
+
     int Patient::GetId()
     {
         return _id;

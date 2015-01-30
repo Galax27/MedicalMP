@@ -4,17 +4,14 @@
 
 namespace MedicalMP
 {
-    class Doctor : public Person
+    class Doctor : public BaseEntity, Person
     {
     private:
-        int _id,
-            _departmentId;
+        int _departmentId;
         Grade _grade;
     public:
         Doctor(int id, int departmentId, int age, Grade grade, std::string firstName, std::string lastName);
         ~Doctor();
-
-        int GetId();
 
         int GetDepartmentId();
         void SetDepartmentId(int value);

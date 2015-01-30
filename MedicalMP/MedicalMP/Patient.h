@@ -13,6 +13,7 @@ namespace MedicalMP
     public:
         Patient(int id, int age, std::string firstName, std::string lastName, bool isDeceased);
         ~Patient();
+		bool Patient::operator==(const Patient& other);
 
         int GetId();
         bool GetIsDeceased();

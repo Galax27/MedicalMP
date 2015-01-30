@@ -13,7 +13,7 @@ namespace MedicalMP
 
     public:
         Person(int age, std::string firstName, std::string lastName);
-        ~Person();
+		virtual ~Person() = 0;
 
         int GetAge();
         void SetAge(int value);
@@ -24,4 +24,6 @@ namespace MedicalMP
         std::string GetLastName();
         void SetLastName(std::string value);
     };
+
+	inline Person::~Person() {}
 }

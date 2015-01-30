@@ -1,7 +1,7 @@
 #pragma once
 
 // Constants
-static unsigned int k_NumThreads(10);
+static unsigned int k_NumThreads(2);
 static unsigned int k_MasterThread(0);
 
 // OpenMP
@@ -12,12 +12,14 @@ static unsigned int k_MasterThread(0);
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <functional> 
 #include <algorithm>
 #include <ctime>
 #include <iomanip>
 #include <vector>
 #include <set>
+#include <map>
 #include <iterator>
 #include <unordered_set>
 #include <chrono>
@@ -27,6 +29,7 @@ static unsigned int k_MasterThread(0);
 #include "Grade.h"
 
 // Models
+#include "BaseEntity.h"
 #include "Person.h"
 #include "Patient.h"
 #include "Doctor.h"
@@ -35,7 +38,16 @@ static unsigned int k_MasterThread(0);
 
 // Database
 #include "Context.h"
-#include "Seed.h"
+
+//Requests
+#include "BaseRequest.h"
+#include "SelectRequest.h"
+#include "DeleteRequest.h"
+#include "InsertRequest.h"
+#include "RequestsContainer.h"
+
+#include "SampleData.h"
+#include "SampleRequests.h"
 
 // Misc
 #include "Logger.h"

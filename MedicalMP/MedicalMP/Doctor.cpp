@@ -3,20 +3,14 @@
 namespace MedicalMP
 {
     Doctor::Doctor(int id, int departmentId, int age, Grade grade, std::string firstName, std::string lastName)
-        :Person(age, firstName, lastName)
+        :BaseEntity(id), Person(age, firstName, lastName)
     {
-        _id = id;
         _departmentId = departmentId;
         _grade = grade;
     }
 
     Doctor::~Doctor()
     {
-    }
-
-    int Doctor::GetId()
-    {
-        return _id;
     }
 
     int Doctor::GetDepartmentId()

@@ -2,9 +2,9 @@
 
 namespace MedicalMP
 {
-    MedicalFile::MedicalFile(int id, int patientId, int doctorId, tm date, Disease diagnostic)
+	MedicalFile::MedicalFile(int id, int patientId, int doctorId, tm date, Disease diagnostic) 
+		:BaseEntity(id)
     {
-        _id = id;
         _patientId = patientId;
         _doctorId = doctorId;
         _date = date;
@@ -13,11 +13,6 @@ namespace MedicalMP
 
     MedicalFile::~MedicalFile()
     {
-    }
-
-    int MedicalFile::getId()
-    {
-        return _id;
     }
 
     int MedicalFile::getPatientId()
