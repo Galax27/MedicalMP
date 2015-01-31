@@ -7,6 +7,6 @@ namespace MedicalMP
 	class SampleRequests
 	{
 	public:
-		static void Seed(RequestsContainer* requests, Context* context);
+		static void Seed(RequestCollection* requests, Context* context);
 	};
 }

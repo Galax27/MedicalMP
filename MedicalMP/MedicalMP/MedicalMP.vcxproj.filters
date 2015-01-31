@@ -46,6 +46,9 @@
     <Filter Include="Source Files\Samples">
       <UniqueIdentifier>{c094c25b-1d96-44ce-a48c-ebad5f1b55c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Requests">
+      <UniqueIdentifier>{a100df18-d90e-4eb1-ab29-790ac0d1566a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Department.cpp">
@@ -89,6 +92,12 @@
     </ClCompile>
     <ClCompile Include="SampleRequests.cpp">
       <Filter>Source Files\Samples</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestsEngine.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestCollection.cpp">
+      <Filter>Source Files\Requests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,9 +146,6 @@
     <ClInclude Include="InsertRequest.h">
       <Filter>Header Files\Requests</Filter>
     </ClInclude>
-    <ClInclude Include="RequestsContainer.h">
-      <Filter>Header Files\Requests</Filter>
-    </ClInclude>
     <ClInclude Include="BaseEntity.h">
       <Filter>Header Files\Database\Model</Filter>
     </ClInclude>
@@ -154,6 +160,12 @@
     </ClInclude>
     <ClInclude Include="SampleRequests.h">
       <Filter>Header Files\Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestsEngine.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestCollection.h">
+      <Filter>Header Files\Requests</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

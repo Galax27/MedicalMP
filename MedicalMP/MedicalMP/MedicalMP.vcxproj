@@ -86,6 +86,8 @@
     <ClCompile Include="MedicalFile.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="RequestCollection.cpp" />
+    <ClCompile Include="RequestsEngine.cpp" />
     <ClCompile Include="SampleData.cpp" />
     <ClCompile Include="SampleRequests.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -107,7 +109,8 @@
     <ClInclude Include="Grade.h" />
     <ClInclude Include="InsertRequest.h" />
     <ClInclude Include="Logger.h" />
-    <ClInclude Include="RequestsContainer.h" />
+    <ClInclude Include="RequestCollection.h" />
+    <ClInclude Include="RequestsEngine.h" />
     <ClInclude Include="SampleData.h" />
     <ClInclude Include="SampleRequests.h" />
     <ClInclude Include="SelectRequest.h" />

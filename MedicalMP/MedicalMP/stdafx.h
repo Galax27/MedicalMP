@@ -1,7 +1,7 @@
 #pragma once
 
 // Constants
-static unsigned int k_NumThreads(2);
+static unsigned int k_NumThreads(10);
 static unsigned int k_MasterThread(0);
 
 // OpenMP
@@ -44,7 +44,8 @@ static unsigned int k_MasterThread(0);
 #include "SelectRequest.h"
 #include "DeleteRequest.h"
 #include "InsertRequest.h"
-#include "RequestsContainer.h"
+#include "RequestCollection.h"
+#include "RequestsEngine.h"
 
 #include "SampleData.h"
 #include "SampleRequests.h"

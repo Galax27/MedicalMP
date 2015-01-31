@@ -7,7 +7,7 @@ int main()
 {
 
 	Context *context = new Context();
-	RequestsContainer *requests = new RequestsContainer();
+	RequestCollection *requests = new RequestCollection();
 	SampleData::Seed(context);
 	SampleRequests::Seed(requests, context);
 	
