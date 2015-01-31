@@ -47,6 +47,9 @@ static unsigned int k_MasterThread(0);
 #include "RequestCollection.h"
 #include "RequestsEngine.h"
 
+//Samples
+#include "PeopleNames.h"
+#include "PatientGenerator.h"
 #include "SampleData.h"
 #include "SampleRequests.h"
 

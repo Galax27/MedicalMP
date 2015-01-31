@@ -8,17 +8,17 @@ namespace MedicalMP
 	class InsertRequest: public BaseRequest<T>
 	{
 	private:
-		BaseEntity* element;
+		BaseEntity* _element;
+		
+		void OnExecute()
+		{
+			Set->insert(_element);
+		}
 
 	public:
 		InsertRequest(std::set<T>* set, T element) : BaseRequest<T>(set)
 		{
-			this->element = element;
-		}
-
-		void Execute()
-		{
-			Set->insert(element);
+			_element = element;
 		}
 	};
 }

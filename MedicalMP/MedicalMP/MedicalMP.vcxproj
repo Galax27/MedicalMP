@@ -85,6 +85,7 @@
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MedicalFile.cpp" />
     <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="PatientGenerator.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="RequestCollection.cpp" />
     <ClCompile Include="RequestsEngine.cpp" />
@@ -109,6 +110,8 @@
     <ClInclude Include="Grade.h" />
     <ClInclude Include="InsertRequest.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="PatientGenerator.h" />
+    <ClInclude Include="PeopleNames.h" />
     <ClInclude Include="RequestCollection.h" />
     <ClInclude Include="RequestsEngine.h" />
     <ClInclude Include="SampleData.h" />

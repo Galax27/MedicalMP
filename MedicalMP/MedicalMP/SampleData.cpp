@@ -66,72 +66,10 @@ namespace MedicalMP
 
 	void SampleData::SeedPatients(Context* context)
 	{
-		context->Patients->insert(new Patient(1, 8, "Tudor", "Petru", false));
-		context->Patients->insert(new Patient(2, 18, "Simon", "Cezar", false));
-		context->Patients->insert(new Patient(3, 22, "Daniel", "Carol", false));
-		context->Patients->insert(new Patient(4, 55, "Dinu", "Veaceslav", true));
-		context->Patients->insert(new Patient(5, 60, "Dorin", "Petru", false));
-		context->Patients->insert(new Patient(6, 48, "Iancu", "Andrei", true));
-		context->Patients->insert(new Patient(7, 38, "Cristi", "Cornel", false));
-		context->Patients->insert(new Patient(8, 26, "Octavian", "Mitica", false));
-		context->Patients->insert(new Patient(9, 40, "Gavril", "Corneliu", true));
-		context->Patients->insert(new Patient(10, 50, "Cristian", "Carol", false));
-
-		context->Patients->insert(new Patient(11, 10, "Maria", "Silviu", false));
-		context->Patients->insert(new Patient(12, 18, "Gabi", "Augustin", true));
-		context->Patients->insert(new Patient(13, 33, "Dragomir", "Denis", false));
-		context->Patients->insert(new Patient(14, 54, "Octavian", "Vasile", false));
-		context->Patients->insert(new Patient(15, 11, "Iulian", "Serafim", true));
-		context->Patients->insert(new Patient(16, 72, "Simon", "Tiberiu", true));
-		context->Patients->insert(new Patient(17, 38, "Mihaita", "Eduard", true));
-		context->Patients->insert(new Patient(18, 7, "Ionut", "Dorin", false));
-		context->Patients->insert(new Patient(19, 5, "Haralamb", "Corneliu", false));
-		context->Patients->insert(new Patient(20, 60, "Alin", "Costel", false));
-
-		context->Patients->insert(new Patient(21, 12, "Nicu", "Horia", true));
-		context->Patients->insert(new Patient(22, 12, "Cristian", "Stefan", true));
-		context->Patients->insert(new Patient(23, 32, "Petrica", "Victor", true));
-		context->Patients->insert(new Patient(24, 55, "Paul", "Lucian", false));
-		context->Patients->insert(new Patient(25, 15, "Marian", "Eugen", false));
-		context->Patients->insert(new Patient(26, 75, "Andrei", "Traian", false));
-		context->Patients->insert(new Patient(27, 68, "Virgil", "Costin", false));
-		context->Patients->insert(new Patient(28, 17, "Emanuel", "Danut", false));
-		context->Patients->insert(new Patient(29, 15, "Dragomir", "Timotei", false));
-		context->Patients->insert(new Patient(30, 70, "Cornel", "Felix", true));
-
-		context->Patients->insert(new Patient(31, 20, "Iuliu", "Beniamin", false));
-		context->Patients->insert(new Patient(32, 20, "Vlad", "Remus", false));
-		context->Patients->insert(new Patient(33, 21, "Dionisie", "Flaviu", false));
-		context->Patients->insert(new Patient(34, 35, "Emanuel", "Vasilica", false));
-		context->Patients->insert(new Patient(35, 31, "Stelian", "Gabi", false));
-		context->Patients->insert(new Patient(36, 76, "Theodor", "Maria", false));
-		context->Patients->insert(new Patient(37, 86, "Ilie", "Mihail", true));
-		context->Patients->insert(new Patient(38, 56, "Miron", "Gabriel", true));
-		context->Patients->insert(new Patient(39, 58, "Anton", "Valeriu", true));
-		context->Patients->insert(new Patient(40, 71, "Eugen", "Corneliu", true));
-
-		context->Patients->insert(new Patient(41, 9, "Cosmin", "Mihail", false));
-		context->Patients->insert(new Patient(42, 11, "Darius", "Tiberiu", false));
-		context->Patients->insert(new Patient(43, 1, "Horea", "Virgil", false));
-		context->Patients->insert(new Patient(44, 5, "Bogdan", "Valerian", false));
-		context->Patients->insert(new Patient(45, 1, "Costin", "Gheorghe", false));
-		context->Patients->insert(new Patient(46, 74, "Virgil", "Horia", true));
-		context->Patients->insert(new Patient(47, 74, "Mihaita", "Pompiliu", false));
-		context->Patients->insert(new Patient(48, 71, "Doru", "Paul", false));
-		context->Patients->insert(new Patient(49, 79, "Gabriel", "Eugen", false));
-		context->Patients->insert(new Patient(50, 61, "Traian", "Marius", false));
-
-		context->Patients->insert(new Patient(100, 45, "Andrei", "Antoni", false));
-		context->Patients->insert(new Patient(101, 38, "Alexandru", "Mateescu", false));
-		context->Patients->insert(new Patient(102, 43, "Bogdan", "Musat", false));
-		context->Patients->insert(new Patient(103, 65, "Berta", "Bolini", true));
-		context->Patients->insert(new Patient(104, 29, "Bianca", "Rotaru", false));
-		context->Patients->insert(new Patient(105, 18, "Colin", "Draganu", false));
-		context->Patients->insert(new Patient(106, 23, "Costel", "Vasile", false));
-		context->Patients->insert(new Patient(107, 55, "Dan", "Caciula", false));
-		context->Patients->insert(new Patient(108, 53, "Daniela", "Matache", true));
-		context->Patients->insert(new Patient(109, 47, "Darius", "Adelei", false));
-		context->Patients->insert(new Patient(110, 33, "Erica", "Nicola", false));
+		for (int i = 1; i < 500; i++)
+		{
+			context->Patients->insert(PatientGenerator::Generate(i));
+		}
 	}
 
 	void SampleData::SeedMedicalFiles(Context* context)

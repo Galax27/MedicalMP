@@ -99,6 +99,9 @@
     <ClCompile Include="RequestCollection.cpp">
       <Filter>Source Files\Requests</Filter>
     </ClCompile>
+    <ClCompile Include="PatientGenerator.cpp">
+      <Filter>Source Files\Samples</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Department.h">
@@ -155,9 +158,6 @@
     <ClInclude Include="Grade.h">
       <Filter>Header Files\Database\Model</Filter>
     </ClInclude>
-    <ClInclude Include="SampleData.h">
-      <Filter>Header Files\Samples</Filter>
-    </ClInclude>
     <ClInclude Include="SampleRequests.h">
       <Filter>Header Files\Samples</Filter>
     </ClInclude>
@@ -166,6 +166,15 @@
     </ClInclude>
     <ClInclude Include="RequestCollection.h">
       <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="PeopleNames.h">
+      <Filter>Header Files\Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleData.h">
+      <Filter>Header Files\Samples</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientGenerator.h">
+      <Filter>Header Files\Samples</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

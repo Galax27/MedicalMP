@@ -7,17 +7,13 @@ int main()
 {
 
 	Context *context = new Context();
-	RequestCollection *requests = new RequestCollection();
+	RequestCollection* requests = new RequestCollection();
+	auto* requestsEngine = new RequestsEngine();
 	SampleData::Seed(context);
 	SampleRequests::Seed(requests, context);
-	
-	std::stringstream ss;
-	ss << context->Patients->size() << " ";
 
-	requests->PatientRequests[requests->PatientRequests.size()-1]->Execute(); //delete some items
-	
-	ss << context->Patients->size();
-	Logger::WriteLog(ss.str());
+	requestsEngine->NumberOfThreads = 5;
+	requestsEngine->Run(requests);
 	//MedicalMP::UnitTests::Seed(1000);
 	//MedicalMP::UnitTests::ParalelizeRequests();
 

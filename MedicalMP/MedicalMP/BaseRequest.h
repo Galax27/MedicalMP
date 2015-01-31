@@ -7,19 +7,38 @@ namespace MedicalMP
 	template <class T>
 	class BaseRequest
 	{
+		
+		private:
+			double _elapsedTime;
+		
 		protected:
 			std::set<T>* Set;
+			virtual void OnExecute() = 0;
+		
 		public:
 			BaseRequest(std::set<T> *set)
 			{
 				this->Set = set;
 			}
 
-			virtual void Execute() = 0;
+			void Execute()
+			{
+				auto timeStart = std::chrono::high_resolution_clock::now();
+
+				OnExecute();
+
+				auto timeStop = std::chrono::high_resolution_clock::now();
+				Utils::GetElapsedTime(timeStart, timeStop, _elapsedTime);
+			}
 			
 			virtual std::set<T>* GetResults()
 			{
 				return Set;
 			};
+
+			double GetElapsedTime()
+			{
+				return _elapsedTime;
+			}
 	};
 }

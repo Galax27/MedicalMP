@@ -8,26 +8,26 @@ namespace MedicalMP
 	class DeleteRequest : public BaseRequest<T>
 	{
 	private:
-		std::function<bool(T)> filter;
+		std::function<bool(T)> _filter;
 
-	public:
-		DeleteRequest(std::set<T>* set, std::function<bool(T)> f) : BaseRequest(set)
-		{
-			this->filter = f;
-		}
-
-		void Execute()
+		void OnExecute()
 		{
 			std::set<T>::iterator it = Set->begin();
 
 			while (it != Set->end())
 			{
-				it = std::find_if(it, Set->end(), filter);
+				it = std::find_if(it, Set->end(), _filter);
 				if (it != Set->end())
 				{
 					it = Set->erase(it);
 				}
 			}
+		}
+
+	public:
+		DeleteRequest(std::set<T>* set, std::function<bool(T)> f) : BaseRequest(set)
+		{
+			_filter = f;
 		}
 	};
 }

@@ -8,8 +8,9 @@ namespace MedicalMP
 		{
 			container->PatientRequests.push_back(new SelectRequest<Patient*>(context->Patients, [&](Patient* p) 
 			{ 
-				return p->GetAge() > Utils::GetRandomUnsigned(30)
-					&& p->GetAge() < Utils::GetRandomUnsigned(70); 
+				return p->GetAge() > Utils::GetRandomUnsigned(10)
+					|| p->GetFirstName() == "andrei" 
+					|| p->GetLastName() == "ion" ; 
 			}));
 		}
 	}
