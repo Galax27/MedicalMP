@@ -7,6 +7,7 @@ namespace MedicalMP
 	{
 		private:
 			RequestCollection* _requests;
+
 			void RunPatientRequests();
 			void RunDoctorRequests();
 			void RunDepartmentRequests();

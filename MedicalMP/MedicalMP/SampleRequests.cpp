@@ -13,5 +13,30 @@ namespace MedicalMP
 					|| p->GetLastName() == "ion" ; 
 			}));
 		}
+
+		for (int i = 0; i < 100; i++)
+		{
+			container->DoctorRequests.push_back(new SelectRequest<Doctor*>(context->Doctors, [&](Doctor* d)
+			{
+				return d->GetFirstName() == "andrei"
+					|| d->GetLastName() == "ion";
+			}));
+		}
+
+		for (int i = 0; i < 100; i++)
+		{
+			container->DepartmentRequests.push_back(new SelectRequest<Department*>(context->Departments, [&](Department* d)
+			{
+				return d->GetName() == "andrei";
+			}));
+		}
+
+		for (int i = 0; i < 100; i++)
+		{
+			container->MedicalFilesRequests.push_back(new SelectRequest<MedicalFile*>(context->MedicalFiles, [&](MedicalFile* m)
+			{
+				return m->getDiagnostic() == Disease::BackPain;
+			}));
+		}
 	}
 }

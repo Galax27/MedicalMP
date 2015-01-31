@@ -4,7 +4,7 @@
 
 namespace MedicalMP
 {
-    class Doctor : public BaseEntity, Person
+    class Doctor : public BaseEntity, public Person
     {
     private:
         int _departmentId;
