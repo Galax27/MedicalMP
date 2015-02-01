@@ -4,8 +4,7 @@
 
 namespace MedicalMP
 {
-	const std::vector <std::string> PeopleNames = {
-
+	const std::string _peopleNamesInit[] = {
 		"Remus", "Nicusor",
 		"Horia", "Octavian",
 		"Ilie", "Cristi",
@@ -102,6 +101,8 @@ namespace MedicalMP
 		"Darius", "Adelei",
 		"Erica", "Nicola"
 	};
+
+	const std::vector <std::string> PeopleNames(_peopleNamesInit, std::end(_peopleNamesInit));
 
 	Grade grades[] = {
 		Grade::Entry,

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <chrono>
+#include "stdafx.h"
 
 namespace MedicalMP
 {

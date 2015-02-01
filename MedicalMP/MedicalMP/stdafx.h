@@ -22,7 +22,7 @@ static unsigned int k_MasterThread(0);
 #include <map>
 #include <iterator>
 #include <unordered_set>
-#include <chrono>
+//#include <chrono>
 
 // Enums
 #include "Disease.h"
