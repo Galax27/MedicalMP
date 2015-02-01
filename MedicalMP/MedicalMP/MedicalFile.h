@@ -1,27 +1,26 @@
-#ifndef MEDICAL_FILE_H
-#define MEDICAL_FILE_H
-#include <ctime>
-#include "Disease.h"
-class MedicalFile
+#pragma once
+
+#include "stdafx.h"
+
+namespace MedicalMP
 {
-	private:
-		int _id,
-			_patientId,
-			_doctorId;
-		tm _date;
-		Disease _diagnostic;
+    class MedicalFile: public BaseEntity
+    {
+    private:
+        int _patientId,
+            _doctorId;
+        tm _date;
+        Disease _diagnostic;
 
-	public:
-		MedicalFile(int id, int patientId, int doctorId, tm date, Disease diagnostic);
-		~MedicalFile();
+    public:
+        MedicalFile(int id, int patientId, int doctorId, tm date, Disease diagnostic);
+        ~MedicalFile();
+		
+        int getPatientId();
+        int getDoctorId();
+        tm getDate();
 
-		int getId();
-		int getPatientId();
-		int getDoctorId();
-		tm getDate();
-
-		Disease getDiagnostic();
-		void setDiagnostic(Disease diagnostic, int doctorId);
-};
-
-#endif
+        Disease getDiagnostic();
+        void setDiagnostic(Disease diagnostic, int doctorId);
+    };
+}

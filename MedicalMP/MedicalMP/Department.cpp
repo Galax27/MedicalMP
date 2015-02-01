@@ -1,27 +1,24 @@
-#include "Department.h"
+#include "stdafx.h"
 
-Department::Department(int id, string name)
+namespace MedicalMP
 {
-	_id = id;
-	_name = name;
-}
+	Department::Department(int id, std::string name) : BaseEntity(id)
+    {
+        _name = name;
+    }
+	
+	Department::~Department()
+	{
 
-Department::~Department()
-{
+	}
 
-}
+    std::string Department::GetName()
+    {
+        return _name;
+    }
 
-int Department::GetId()
-{
-	return _id;
-}
-
-string Department::GetName()
-{
-	return _name;
-}
-
-void Department::SetName(string value)
-{
-	_name = value;
+    void Department::SetName(std::string value)
+    {
+        _name = value;
+    }
 }

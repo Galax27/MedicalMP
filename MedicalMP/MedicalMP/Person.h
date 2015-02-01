@@ -1,25 +1,29 @@
-#ifndef PERSON_H
-#define PERSON_H
-#include <string>
-using namespace std;
+#pragma once
 
-class Person
+#include "stdafx.h"
+
+namespace MedicalMP
 {
-	private:
-		int _age;
-		string _firstName,
-			_lastName;
-	public:
-		Person(int age, string firstName, string lastName);
-		~Person();
+    class Person
+    {
+    private:
+        int _age;
+        std::string _firstName;
+        std::string _lastName;
 
-		int GetAge();
-		void SetAge(int value);
+    public:
+        Person(int age, std::string firstName, std::string lastName);
+		virtual ~Person() = 0;
 
-		string GetFirstName();
-		void SetFirstName(string value);
+        int GetAge();
+        void SetAge(int value);
 
-		string GetLastName();
-		void SetLastName(string value);
-};
-#endif
+        std::string GetFirstName();
+        void SetFirstName(std::string value);
+
+        std::string GetLastName();
+        void SetLastName(std::string value);
+    };
+
+	inline Person::~Person() {}
+}

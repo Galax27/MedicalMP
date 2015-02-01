@@ -47,12 +47,12 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -62,13 +62,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,25 +78,50 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseEntity.cpp" />
     <ClCompile Include="Department.cpp" />
     <ClCompile Include="Doctor.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Entrypoint.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="MedicalFile.cpp" />
     <ClCompile Include="Patient.cpp" />
-    <ClCompile Include="PatientRepository.cpp" />
+    <ClCompile Include="PatientGenerator.cpp" />
     <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Seed.cpp" />
+    <ClCompile Include="RequestCollection.cpp" />
+    <ClCompile Include="RequestsEngine.cpp" />
+    <ClCompile Include="SampleData.cpp" />
+    <ClCompile Include="SampleRequests.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseEntity.h" />
+    <ClInclude Include="BaseRequest.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="DeleteRequest.h" />
     <ClInclude Include="Department.h" />
     <ClInclude Include="Disease.h" />
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="Grade.h" />
+    <ClInclude Include="InsertRequest.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="PatientGenerator.h" />
+    <ClInclude Include="PeopleNames.h" />
+    <ClInclude Include="RequestCollection.h" />
+    <ClInclude Include="RequestsEngine.h" />
+    <ClInclude Include="SampleData.h" />
+    <ClInclude Include="SampleRequests.h" />
+    <ClInclude Include="SelectRequest.h" />
+    <ClInclude Include="System.h" />
     <ClInclude Include="MedicalFile.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="Person.h" />
-    <ClInclude Include="Seed.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
