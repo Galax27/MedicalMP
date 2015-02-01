@@ -19,7 +19,7 @@ namespace MedicalMP
 
     bool UnitTests::CreateNewEntry(unsigned int threadID, double& timeElapsed)
     {
-        auto timeStart(std::chrono::high_resolution_clock::now());
+        auto timeStart(clock());
 
         entry *newEntry(new entry());
 
@@ -29,7 +29,7 @@ namespace MedicalMP
                 System::UNIT_TESTS + System::HASHTAG
                 + System::THREAD_ID + std::to_string(threadID) + System::HASHTAG
                 + "! Failed to create new entry, pointer null." + System::HASHTAG
-                + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+                + Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
             );
             
             return false;
@@ -40,7 +40,7 @@ namespace MedicalMP
             Logger::WriteLog(
                 System::UNIT_TESTS + System::HASHTAG + System::THREAD_ID + std::to_string(threadID) + System::HASHTAG
                 + "! Failed to create new entry, ID already exists." + System::HASHTAG
-                + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+				+ Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
             );
             
             return false;
@@ -52,7 +52,7 @@ namespace MedicalMP
         Logger::WriteLog(
             System::UNIT_TESTS + System::HASHTAG + System::THREAD_ID + std::to_string(threadID) + System::HASHTAG 
             + "New entry creation succeded." + System::HASHTAG
-            + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+			+ Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
         );
 
         return true;
@@ -73,7 +73,7 @@ namespace MedicalMP
 
     bool UnitTests::DeleteEntry(unsigned int entryID, unsigned int threadID, double& timeElapsed)
     {
-        auto timeStart = std::chrono::high_resolution_clock::now();
+		auto timeStart = clock();
 
         int indexFound(SearchEntry(entryID));
 
@@ -91,7 +91,7 @@ namespace MedicalMP
             Logger::WriteLog(
                 System::UNIT_TESTS + System::HASHTAG + System::THREAD_ID + std::to_string(threadID) + System::HASHTAG 
                 + "Erased entry." + System::HASHTAG
-                + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+				+ Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
             );
 
             return true;
@@ -100,7 +100,7 @@ namespace MedicalMP
         Logger::WriteLog(
             System::UNIT_TESTS + System::HASHTAG + System::THREAD_ID + std::to_string(threadID) + System::HASHTAG
             + "! Failed to erase, entry ID not found." + System::HASHTAG
-            + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+			+ Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
         );
 
         return false;
@@ -108,7 +108,7 @@ namespace MedicalMP
 
     bool UnitTests::UpdateEntry(unsigned int entryID, unsigned int threadID, double& timeElapsed)
     {
-        auto timeStart = std::chrono::high_resolution_clock::now();
+		auto timeStart = clock();
 
         int indexFound(SearchEntry(entryID));
 
@@ -116,7 +116,7 @@ namespace MedicalMP
         {
             Logger::WriteLog(System::UNIT_TESTS + System::THREAD_ID + System::HASHTAG 
                 + "! Failed to update, entry ID not found." + System::HASHTAG
-                + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+				+ Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
             );
 
             return false;
@@ -127,7 +127,7 @@ namespace MedicalMP
 
         Logger::WriteLog(System::UNIT_TESTS + System::HASHTAG + System::THREAD_ID + std::to_string(threadID) + System::HASHTAG 
             + "Updated entry." + System::HASHTAG
-            + Utils::GetElapsedTime(timeStart, std::chrono::high_resolution_clock::now(), timeElapsed)
+			+ Utils::GetElapsedTime(timeStart, clock(), timeElapsed)
         );
 
         return true;

@@ -35,7 +35,7 @@ namespace MedicalMP
         return std::rand() % limit;
     }
 
-    std::string Utils::GetElapsedTime(
+   /* std::string Utils::GetElapsedTime(
         std::chrono::time_point<std::chrono::system_clock> timeStart,
         std::chrono::time_point<std::chrono::system_clock> timeEnd,
         double& secondsCounted)
@@ -46,5 +46,17 @@ namespace MedicalMP
         std::string output("Job took " + std::to_string(secondsCounted) + " seconds.");
 
         return output;
-    }
+    }*/
+
+	std::string Utils::GetElapsedTime(
+		clock_t timeStart,
+		clock_t timeEnd,
+		double& secondsCounted)
+	{
+		secondsCounted = double(timeEnd - timeStart) / CLOCKS_PER_SEC;
+
+		std::string output("Job took " + std::to_string(secondsCounted) + " seconds.");
+
+		return output;
+	}
 }

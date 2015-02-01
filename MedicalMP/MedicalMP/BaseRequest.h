@@ -23,11 +23,11 @@ namespace MedicalMP
 
 			void Execute()
 			{
-				auto timeStart = std::chrono::high_resolution_clock::now();
+				auto timeStart = clock();
 
 				OnExecute();
 
-				auto timeStop = std::chrono::high_resolution_clock::now();
+				auto timeStop = clock();
 				Utils::GetElapsedTime(timeStart, timeStop, _elapsedTime);
 			}
 			
