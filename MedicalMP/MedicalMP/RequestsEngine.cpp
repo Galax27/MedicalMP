@@ -12,12 +12,12 @@ namespace MedicalMP
 	{
 		_requests = requests;
 
-		if (Verbose) Logger::WriteLog(System::UNIT_TESTS + " " + std::to_string(_requests->Size()) + " to process.");
+		if (Verbose) Logger::WriteLog(System::UNIT_TESTS + " " + std::to_string((long long)_requests->Size()) + " to process.");
 
 		omp_set_num_threads(NumberOfThreads);
 
 		if (Verbose) Logger::WriteLog(System::UNIT_TESTS + System::HASHTAG + "Starting resolve requests using OpenMP..");
-		if (Verbose) Logger::WriteLog(System::UNIT_TESTS + System::HASHTAG + "Number of threads used : " + std::to_string(NumberOfThreads));
+		if (Verbose) Logger::WriteLog(System::UNIT_TESTS + System::HASHTAG + "Number of threads used : " + std::to_string((long long)NumberOfThreads));
 
 		#pragma omp parallel
 		{
@@ -84,10 +84,10 @@ namespace MedicalMP
 	{
 		Logger::WriteLog(
 			System::UNIT_TESTS + System::HASHTAG
-			+ System::THREAD_ID + std::to_string(threadId) + System::HASHTAG
+			+ System::THREAD_ID + std::to_string((long long)threadId) + System::HASHTAG
 			+ "Entity: " + entity + System::HASHTAG + 
-			+ "Request Id: " + std::to_string(requestId) + System::HASHTAG + 
-			+ "Time: " + std::to_string(elapsedTime)
+			+ "Request Id: " + std::to_string((long long)requestId) + System::HASHTAG + 
+			+ "Time: " + std::to_string((long double)elapsedTime)
 			);
 	}
 }

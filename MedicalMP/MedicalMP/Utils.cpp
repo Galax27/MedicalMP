@@ -55,7 +55,7 @@ namespace MedicalMP
 	{
 		secondsCounted = double(timeEnd - timeStart) / CLOCKS_PER_SEC;
 
-		std::string output("Job took " + std::to_string(secondsCounted) + " seconds.");
+		std::string output("Job took " + std::to_string((long double)secondsCounted) + " seconds.");
 
 		return output;
 	}

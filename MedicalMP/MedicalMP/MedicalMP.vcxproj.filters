@@ -78,9 +78,6 @@
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files\Misc</Filter>
     </ClCompile>
-    <ClCompile Include="TestsDB.cpp">
-      <Filter>Source Files\UnitTests</Filter>
-    </ClCompile>
     <ClCompile Include="System.cpp">
       <Filter>Source Files\Misc</Filter>
     </ClCompile>
@@ -130,9 +127,6 @@
     </ClInclude>
     <ClInclude Include="Utils.h">
       <Filter>Header Files\Misc</Filter>
-    </ClInclude>
-    <ClInclude Include="TestsDB.h">
-      <Filter>Header Files\UnitTests</Filter>
     </ClInclude>
     <ClInclude Include="System.h">
       <Filter>Header Files\Misc</Filter>

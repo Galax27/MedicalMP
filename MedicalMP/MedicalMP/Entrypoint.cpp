@@ -1,6 +1,5 @@
 #include "stdafx.h"
 
-#include "TestsDB.h"
 using namespace MedicalMP;
 
 int main()
